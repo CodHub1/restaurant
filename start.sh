@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
+python manage.py collectstatic --no-input
 python manage.py migrate --no-input
 python manage.py loaddata data.json || true
 
