@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная — Старик и море{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<section class="hero text-white d-flex align-items-center">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="{% static '1680-900.mp4' %}" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="container text-center py-5 position-relative">
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <h4>Свежие морепродукты</h4>
+            <p class="text-muted">Каждое утро — поставка с побережья.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <h4>Авторская кухня</h4>
+            <p class="text-muted">Шеф-повар с 15-летним опытом.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <h4>Уютная атмосфера</h4>
+            <p class="text-muted">Живая музыка по выходным.</p>
+        </div>
+    </div>
+</section>
+
+{% if featured_dishes %}
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Из нашего меню</h2>
+        <div class="row">
+            {% for dish in featured_dishes %}
+            <div class="col-md-4 col-lg-2 mb-4">
+                <div class="card h-100 dish-card">
+                    {% if dish.image %}
+                        <img src="{{ dish.image.url }}" class="card-img-top dish-img" alt="{{ dish.name }}">
+                    {% else %}
+                        <div class="card-img-top dish-img-placeholder"></div>
+                    {% endif %}
+                    <div class="card-body p-2">
+                        <h6 class="card-title mb-1">{{ dish.name }}</h6>
+                        <p class="text-warning fw-bold mb-0">{{ dish.price }} ₽</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center">
+            <a href="{% url 'menu' %}" class="btn btn-dark">Всё меню</a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% if latest_news %}
+<section class="container py-5">
+    <h2 class="text-center mb-4">Последние новости</h2>
+    <div class="row">
+        {% for n in latest_news %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                {% if n.image %}
+                    <img src="{{ n.image.url }}" class="card-img-top news-img" alt="{{ n.title }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ n.title }}</h5>
+                    <p class="text-muted small">{{ n.published_at|date:"d.m.Y" }}</p>
+                    <p class="card-text">{{ n.content|truncatewords:20 }}</p>
+                    <a href="{% url 'news_detail' n.pk %}" class="btn btn-sm btn-outline-dark">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+{% endblock %}

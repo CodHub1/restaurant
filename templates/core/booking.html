@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Бронирование столика — Старик и море{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <h1 class="mb-3">Онлайн-бронирование</h1>
+            <p class="text-muted mb-4">
+                Заполните форму, и мы зарезервируем столик на удобное для вас время.
+                Менеджер свяжется по указанному телефону для подтверждения.
+            </p>
+
+            <form method="post" novalidate class="card card-body shadow-sm js-validated-form">
+                {% csrf_token %}
+
+                {% if form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+
+                <div class="mb-3">
+                    <label class="form-label">Имя <span class="text-danger">*</span></label>
+                    {{ form.name }}
+                    {% if form.name.errors %}<div class="text-danger small">{{ form.name.errors }}</div>{% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Телефон <span class="text-danger">*</span></label>
+                    {{ form.phone }}
+                    {% if form.phone.errors %}<div class="text-danger small">{{ form.phone.errors }}</div>{% endif %}
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Дата <span class="text-danger">*</span></label>
+                        {{ form.date }}
+                        {% if form.date.errors %}<div class="text-danger small">{{ form.date.errors }}</div>{% endif %}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Время <span class="text-danger">*</span></label>
+                        {{ form.time }}
+                        {% if form.time.errors %}<div class="text-danger small">{{ form.time.errors }}</div>{% endif %}
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Количество гостей <span class="text-danger">*</span></label>
+                    {{ form.guests }}
+                    {% if form.guests.errors %}<div class="text-danger small">{{ form.guests.errors }}</div>{% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Примечание</label>
+                    {{ form.note }}
+                </div>
+
+                <button type="submit" class="btn btn-warning btn-lg">
+                    Забронировать
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,310 @@
+/* Стили сайта ресторана морепродуктов «Старик и море» */
+
+:root {
+    --ocean-deep: #0a2540;
+    --ocean-blue: #1a5490;
+    --ocean-light: #3498db;
+    --ocean-teal: #16a085;
+    --ocean-aqua: #5dade2;
+    --sand-light: #f8f9fa;
+    --accent-color: #2c3e50;
+    --pearl-white: #ffffff;
+    --price-color: #000000;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background-color: var(--sand-light);
+    color: #2c3e50;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    color: var(--ocean-deep);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Навигационная панель */
+.navbar-dark, .navbar.bg-dark {
+    background: var(--ocean-deep) !important;
+    background-color: var(--ocean-deep) !important;
+    box-shadow: 0 2px 15px rgba(10, 37, 64, 0.3);
+}
+
+.bg-dark {
+    background-color: var(--ocean-deep) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--pearl-white) !important;
+}
+
+.nav-link {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--ocean-aqua) !important;
+}
+
+.btn-warning {
+    background: var(--ocean-teal);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    color: white !important;
+}
+
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(22, 160, 133, 0.4);
+    background: var(--ocean-blue);
+}
+
+/* Шапка главной страницы - видео фон */
+.hero {
+    min-height: 480px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid var(--ocean-aqua);
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 37, 64, 0.5);
+    z-index: 1;
+}
+
+.hero .container {
+    z-index: 2;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--ocean-aqua);
+    z-index: 2;
+}
+
+.hero h1 {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Карточки блюд - премиум стиль */
+.dish-card, .card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(10, 37, 64, 0.08);
+    background: var(--pearl-white);
+}
+
+.dish-card:hover, .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(10, 37, 64, 0.15);
+}
+
+.dish-img,
+.dish-img-placeholder {
+    height: 140px;
+    object-fit: cover;
+    background: var(--sand-light);
+    border-bottom: 2px solid var(--ocean-aqua);
+}
+
+.dish-img-lg,
+.dish-img-placeholder-lg {
+    height: 250px;
+    object-fit: cover;
+    background: var(--sand-light);
+    border-bottom: 3px solid var(--ocean-aqua);
+}
+
+.card-title {
+    color: var(--ocean-deep);
+    font-weight: 600;
+}
+
+.badge.bg-secondary {
+    background: var(--ocean-blue) !important;
+    padding: 0.4rem 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.text-warning {
+    color: var(--price-color) !important;
+    font-weight: 700 !important;
+}
+
+/* Цены блюд */
+.card-footer {
+    background: var(--pearl-white) !important;
+    border-top: 1px solid rgba(10, 37, 64, 0.1);
+}
+
+/* Новости */
+.news-img {
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--ocean-teal);
+}
+
+.news-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Кнопки */
+.btn-dark {
+    background: var(--ocean-deep);
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background: var(--ocean-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 37, 64, 0.3);
+}
+
+.btn-outline-dark {
+    border-color: var(--ocean-blue);
+    color: var(--ocean-blue);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+    background: var(--ocean-blue);
+    border-color: var(--ocean-blue);
+    transform: translateY(-2px);
+}
+
+/* Формы */
+.form-control, .form-select {
+    border: 2px solid rgba(10, 37, 64, 0.15);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--ocean-aqua);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.15);
+}
+
+.card-body.shadow-sm {
+    box-shadow: 0 4px 15px rgba(10, 37, 64, 0.08) !important;
+}
+
+/* Фон секций */
+.bg-light {
+    background: var(--sand-light) !important;
+}
+
+/* Футер */
+footer, footer.bg-dark {
+    background: var(--ocean-deep) !important;
+    background-color: var(--ocean-deep) !important;
+    box-shadow: 0 -2px 15px rgba(10, 37, 64, 0.3);
+}
+
+footer h5, footer h6 {
+    color: var(--pearl-white);
+    font-weight: 600;
+}
+
+footer a {
+    color: var(--ocean-aqua);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--ocean-aqua);
+    text-decoration: underline;
+}
+
+/* Алерты */
+.alert {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.alert-success {
+    background: #d5f4e6;
+    color: #0a5c36;
+}
+
+.alert-info {
+    background: var(--sand-light);
+    color: var(--ocean-deep);
+    border-left: 4px solid var(--ocean-blue);
+}
+
+/* Декоративные элементы */
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--ocean-blue);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Подсветка ошибок валидации */
+.is-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out;
+}

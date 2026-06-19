@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}Контакты — Старик и море{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="mb-5">Контакты</h1>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body py-4">
+                    <h5 class="card-title">Адрес</h5>
+                    <p class="card-text text-muted">Чистопрудный бульвар, 12Ас1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body py-4">
+                    <h5 class="card-title">Телефон</h5>
+                    <p class="card-text">
+                        <a href="tel:+79037909805" class="text-dark text-decoration-none fw-semibold">
+                            +7 (903) 790-98-05
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body py-4">
+                    <h5 class="card-title">Режим работы</h5>
+                    <p class="card-text text-muted">ПН–ВС с 11:00 до 23:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <h2 class="mb-3">Обратная связь</h2>
+            <p class="text-muted mb-4">
+                Оставьте сообщение, пожелание или отзыв — мы обязательно его прочитаем.
+            </p>
+
+            <form method="post" novalidate class="card card-body shadow-sm js-validated-form">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label class="form-label">Имя <span class="text-danger">*</span></label>
+                    {{ form.name }}
+                    {% if form.name.errors %}<div class="text-danger small">{{ form.name.errors }}</div>{% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">E-mail <span class="text-danger">*</span></label>
+                    {{ form.email }}
+                    {% if form.email.errors %}<div class="text-danger small">{{ form.email.errors }}</div>{% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Сообщение <span class="text-danger">*</span></label>
+                    {{ form.message }}
+                    {% if form.message.errors %}<div class="text-danger small">{{ form.message.errors }}</div>{% endif %}
+                </div>
+
+                <button type="submit" class="btn btn-dark btn-lg">
+                    Отправить
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
