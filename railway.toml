@@ -1,0 +1,4 @@
+# Railway: use Docker instead of Railpack/mise
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
