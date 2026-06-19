@@ -1,1 +1,473 @@
-[{"model": "auth.user", "fields": {"password": "pbkdf2_sha256$1000000$yq1E26Gb3JrGCC6wFj4TXI$+vXAHgVOwv5+rf/WxYTgckdHR30sncFuCxGu49Pg/58=", "last_login": "2026-06-06T10:37:59.398Z", "is_superuser": true, "username": "admin", "first_name": "", "last_name": "", "email": "admin@mail.ru", "is_staff": true, "is_active": true, "date_joined": "2026-05-28T07:21:41.528Z", "groups": [], "user_permissions": []}}, {"model": "sessions.session", "pk": "cbg1wx9iwj1fcmn8kfyzqu3m8wvd14re", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pBOy4Dj0n3PQGAGpWogKe3KeHfbpAvdvvf-fysf1iX7taXZT6IuCtTpl8XAz1R2IY9Q7lVzLcs8Rb0n-rBNj1XS63q0fwc5tLytHQMQWIdnC-AwoeNeqLdyMyaREFmRuJE0ILEjYeq6SIOxbAwGQPX5Ar0INwk:1wSV7a:UPc13MUd0huPurLRp1uIfaY7BTLKPHU95cR-v-vvTiI", "expire_date": "2026-06-11T07:25:38.536Z"}}, {"model": "sessions.session", "pk": "o847ma35wdd5s9bffmje8zio6bkn7ro4", "fields": {"session_data": ".eJxVjMsOwiAUBf-FtSGlPAou3fsN5D5AqgaS0q6M_65NutDtmZnzEhG2tcStpyXOLM5CidPvhkCPVHfAd6i3JqnVdZlR7oo8aJfXxul5Ody_gwK9fOusExowWhODsTgoVIFDyOTSiMFwthgUGj8qmNBSGLwDmybvMmPWZMX7A_65OJk:1wVoPf:iMUMax4uSNgf1H4O3_1yzNQqnw-7W_iDf_2wLK_k10U", "expire_date": "2026-06-20T10:37:59.412Z"}}, {"model": "core.category", "pk": 1, "fields": {"name": "Супы", "slug": "supy", "order": 0}}, {"model": "core.category", "pk": 2, "fields": {"name": "Салаты", "slug": "salaty", "order": 0}}, {"model": "core.category", "pk": 3, "fields": {"name": "Ракообразные", "slug": "rakoobraznye", "order": 0}}, {"model": "core.category", "pk": 4, "fields": {"name": "Устрицы", "slug": "ustricy", "order": 0}}, {"model": "core.category", "pk": 5, "fields": {"name": "Роллы", "slug": "rolly", "order": 0}}, {"model": "core.category", "pk": 6, "fields": {"name": "Рыба", "slug": "ryba", "order": 0}}, {"model": "core.dish", "pk": 1, "fields": {"category": 1, "name": "Тайский том ям по-королевски", "description": "", "price": "3700.00", "image": "dishes/Снимок_экрана_2026-05-29_165209.png", "is_available": true, "created_at": "2026-05-29T13:52:27.526Z"}}, {"model": "core.dish", "pk": 2, "fields": {"category": 2, "name": "С креветками, авокадо, томатами и киноа", "description": "", "price": "1290.00", "image": "dishes/Снимок_экрана_2026-05-29_165642.png", "is_available": true, "created_at": "2026-05-29T13:57:16.365Z"}}, {"model": "core.dish", "pk": 3, "fields": {"category": 3, "name": "Камчатский краб живой", "description": "100г", "price": "1950.00", "image": "dishes/Снимок_экрана_2026-05-29_170342.png", "is_available": true, "created_at": "2026-05-29T14:04:06.950Z"}}, {"model": "core.dish", "pk": 4, "fields": {"category": 4, "name": "Моана", "description": "1шт.", "price": "950.00", "image": "dishes/Снимок_экрана_2026-05-29_170846.png", "is_available": true, "created_at": "2026-05-29T14:09:58.577Z"}}, {"model": "core.dish", "pk": 5, "fields": {"category": 5, "name": "Филадельфия", "description": "", "price": "1450.00", "image": "dishes/Снимок_экрана_2026-05-29_171605.png", "is_available": true, "created_at": "2026-05-29T14:16:33.903Z"}}, {"model": "core.dish", "pk": 6, "fields": {"category": 6, "name": "Сибас с икорным соусом", "description": "", "price": "6500.00", "image": "dishes/Снимок_экрана_2026-05-29_172528.png", "is_available": true, "created_at": "2026-05-29T14:26:40.135Z"}}, {"model": "core.news", "pk": 1, "fields": {"title": "ШОУ «ЭЙФОРИЯ»", "content": "5 июня ресторан «Старик и море» проведет шоу-вечер «Эйфория», объединив авторскую гастрономию, живую музыку и танцевальную программу. \r\n\r\nКаждого гостя вечера ожидает эксклюзивный сет от шеф-повара Александра Селезнева и авторский коктейль от шеф-бармена Валерия Расина.", "image": "news/Снимок_экрана_2026-05-29_162929.png", "is_active": true, "published_at": "2026-05-29T13:28:00Z"}}, {"model": "core.booking", "pk": 1, "fields": {"name": "Иван", "phone": "8(999)900-90-90", "date": "2026-05-30", "time": "02:43:00", "guests": 3, "note": "Нет", "status": "confirmed", "created_at": "2026-05-29T20:43:50.405Z"}}, {"model": "core.feedback", "pk": 1, "fields": {"name": "Иван", "email": "ivan@mail.ru", "message": "Привет", "is_read": true, "created_at": "2026-05-29T20:44:32.981Z"}}, {"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2026-05-29T13:30:03.639Z", "user": ["admin"], "content_type": ["core", "news"], "object_id": "1", "object_repr": "ШОУ «ЭЙФОРИЯ»", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2026-05-29T13:50:50.289Z", "user": ["admin"], "content_type": ["core", "category"], "object_id": "1", "object_repr": "Супы", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2026-05-29T13:52:27.528Z", "user": ["admin"], "content_type": ["core", "dish"], "object_id": "1", "object_repr": "Тайский том ям по-королевски (Супы)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2026-05-29T13:54:13.833Z", "user": ["admin"], "content_type": ["core", "category"], "object_id": "2", "object_repr": "Салаты", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2026-05-29T13:57:16.366Z", "user": ["admin"], "content_type": ["core", "dish"], "object_id": "2", "object_repr": "С креветками, авокадо, томатами и киноа (Салаты)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2026-05-29T14:00:54.539Z", "user": ["admin"], "content_type": ["core", "category"], "object_id": "3", "object_repr": "Ракообразные", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2026-05-29T14:04:06.951Z", "user": ["admin"], "content_type": ["core", "dish"], "object_id": "3", "object_repr": "Камчатский краб живой (Ракообразные)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2026-05-29T14:07:49.137Z", "user": ["admin"], "content_type": ["core", "category"], "object_id": "4", "object_repr": "Устрицы", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2026-05-29T14:09:58.579Z", "user": ["admin"], "content_type": ["core", "dish"], "object_id": "4", "object_repr": "Моана (Устрицы)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2026-05-29T14:12:14.746Z", "user": ["admin"], "content_type": ["core", "category"], "object_id": "5", "object_repr": "Роллы", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2026-05-29T14:16:33.904Z", "user": ["admin"], "content_type": ["core", "dish"], "object_id": "5", "object_repr": "Филадельфия (Роллы)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2026-05-29T14:23:57.501Z", "user": ["admin"], "content_type": ["core", "category"], "object_id": "6", "object_repr": "Рыба", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2026-05-29T14:26:40.137Z", "user": ["admin"], "content_type": ["core", "dish"], "object_id": "6", "object_repr": "Сибас с икорным соусом (Рыба)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2026-05-29T20:45:07.613Z", "user": ["admin"], "content_type": ["core", "feedback"], "object_id": "1", "object_repr": "Иван (ivan@mail.ru)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u043e\\u0447\\u0438\\u0442\\u0430\\u043d\\u043e\"]}}]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2026-05-29T20:45:19.521Z", "user": ["admin"], "content_type": ["core", "booking"], "object_id": "1", "object_repr": "Иван — 2026-05-30 02:43", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"}}]
+[
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$yq1E26Gb3JrGCC6wFj4TXI$+vXAHgVOwv5+rf/WxYTgckdHR30sncFuCxGu49Pg/58=",
+      "last_login": "2026-06-06T10:37:59.398Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@mail.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-05-28T07:21:41.528Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "cbg1wx9iwj1fcmn8kfyzqu3m8wvd14re",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pBOy4Dj0n3PQGAGpWogKe3KeHfbpAvdvvf-fysf1iX7taXZT6IuCtTpl8XAz1R2IY9Q7lVzLcs8Rb0n-rBNj1XS63q0fwc5tLytHQMQWIdnC-AwoeNeqLdyMyaREFmRuJE0ILEjYeq6SIOxbAwGQPX5Ar0INwk:1wSV7a:UPc13MUd0huPurLRp1uIfaY7BTLKPHU95cR-v-vvTiI",
+      "expire_date": "2026-06-11T07:25:38.536Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "o847ma35wdd5s9bffmje8zio6bkn7ro4",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAUBf-FtSGlPAou3fsN5D5AqgaS0q6M_65NutDtmZnzEhG2tcStpyXOLM5CidPvhkCPVHfAd6i3JqnVdZlR7oo8aJfXxul5Ody_gwK9fOusExowWhODsTgoVIFDyOTSiMFwthgUGj8qmNBSGLwDmybvMmPWZMX7A_65OJk:1wVoPf:iMUMax4uSNgf1H4O3_1yzNQqnw-7W_iDf_2wLK_k10U",
+      "expire_date": "2026-06-20T10:37:59.412Z"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 1,
+    "fields": {
+      "name": "Супы",
+      "slug": "supy",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 2,
+    "fields": {
+      "name": "Салаты",
+      "slug": "salaty",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 3,
+    "fields": {
+      "name": "Ракообразные",
+      "slug": "rakoobraznye",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 4,
+    "fields": {
+      "name": "Устрицы",
+      "slug": "ustricy",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 5,
+    "fields": {
+      "name": "Роллы",
+      "slug": "rolly",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 6,
+    "fields": {
+      "name": "Рыба",
+      "slug": "ryba",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.dish",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Тайский том ям по-королевски",
+      "description": "",
+      "price": "3700.00",
+      "image": "dishes/dish-1.png",
+      "is_available": true,
+      "created_at": "2026-05-29T13:52:27.526Z"
+    }
+  },
+  {
+    "model": "core.dish",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "name": "С креветками, авокадо, томатами и киноа",
+      "description": "",
+      "price": "1290.00",
+      "image": "dishes/dish-2.png",
+      "is_available": true,
+      "created_at": "2026-05-29T13:57:16.365Z"
+    }
+  },
+  {
+    "model": "core.dish",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "name": "Камчатский краб живой",
+      "description": "100г",
+      "price": "1950.00",
+      "image": "dishes/dish-3.png",
+      "is_available": true,
+      "created_at": "2026-05-29T14:04:06.950Z"
+    }
+  },
+  {
+    "model": "core.dish",
+    "pk": 4,
+    "fields": {
+      "category": 4,
+      "name": "Моана",
+      "description": "1шт.",
+      "price": "950.00",
+      "image": "dishes/dish-4.png",
+      "is_available": true,
+      "created_at": "2026-05-29T14:09:58.577Z"
+    }
+  },
+  {
+    "model": "core.dish",
+    "pk": 5,
+    "fields": {
+      "category": 5,
+      "name": "Филадельфия",
+      "description": "",
+      "price": "1450.00",
+      "image": "dishes/dish-5.png",
+      "is_available": true,
+      "created_at": "2026-05-29T14:16:33.903Z"
+    }
+  },
+  {
+    "model": "core.dish",
+    "pk": 6,
+    "fields": {
+      "category": 6,
+      "name": "Сибас с икорным соусом",
+      "description": "",
+      "price": "6500.00",
+      "image": "dishes/dish-6.png",
+      "is_available": true,
+      "created_at": "2026-05-29T14:26:40.135Z"
+    }
+  },
+  {
+    "model": "core.news",
+    "pk": 1,
+    "fields": {
+      "title": "ШОУ «ЭЙФОРИЯ»",
+      "content": "5 июня ресторан «Старик и море» проведет шоу-вечер «Эйфория», объединив авторскую гастрономию, живую музыку и танцевальную программу. \r\n\r\nКаждого гостя вечера ожидает эксклюзивный сет от шеф-повара Александра Селезнева и авторский коктейль от шеф-бармена Валерия Расина.",
+      "image": "news/news-1.png",
+      "is_active": true,
+      "published_at": "2026-05-29T13:28:00Z"
+    }
+  },
+  {
+    "model": "core.booking",
+    "pk": 1,
+    "fields": {
+      "name": "Иван",
+      "phone": "8(999)900-90-90",
+      "date": "2026-05-30",
+      "time": "02:43:00",
+      "guests": 3,
+      "note": "Нет",
+      "status": "confirmed",
+      "created_at": "2026-05-29T20:43:50.405Z"
+    }
+  },
+  {
+    "model": "core.feedback",
+    "pk": 1,
+    "fields": {
+      "name": "Иван",
+      "email": "ivan@mail.ru",
+      "message": "Привет",
+      "is_read": true,
+      "created_at": "2026-05-29T20:44:32.981Z"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2026-05-29T13:30:03.639Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "news"
+      ],
+      "object_id": "1",
+      "object_repr": "ШОУ «ЭЙФОРИЯ»",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2026-05-29T13:50:50.289Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "category"
+      ],
+      "object_id": "1",
+      "object_repr": "Супы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2026-05-29T13:52:27.528Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "dish"
+      ],
+      "object_id": "1",
+      "object_repr": "Тайский том ям по-королевски (Супы)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2026-05-29T13:54:13.833Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "category"
+      ],
+      "object_id": "2",
+      "object_repr": "Салаты",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2026-05-29T13:57:16.366Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "dish"
+      ],
+      "object_id": "2",
+      "object_repr": "С креветками, авокадо, томатами и киноа (Салаты)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2026-05-29T14:00:54.539Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "category"
+      ],
+      "object_id": "3",
+      "object_repr": "Ракообразные",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2026-05-29T14:04:06.951Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "dish"
+      ],
+      "object_id": "3",
+      "object_repr": "Камчатский краб живой (Ракообразные)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2026-05-29T14:07:49.137Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "category"
+      ],
+      "object_id": "4",
+      "object_repr": "Устрицы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2026-05-29T14:09:58.579Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "dish"
+      ],
+      "object_id": "4",
+      "object_repr": "Моана (Устрицы)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2026-05-29T14:12:14.746Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "category"
+      ],
+      "object_id": "5",
+      "object_repr": "Роллы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2026-05-29T14:16:33.904Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "dish"
+      ],
+      "object_id": "5",
+      "object_repr": "Филадельфия (Роллы)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2026-05-29T14:23:57.501Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "category"
+      ],
+      "object_id": "6",
+      "object_repr": "Рыба",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2026-05-29T14:26:40.137Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "dish"
+      ],
+      "object_id": "6",
+      "object_repr": "Сибас с икорным соусом (Рыба)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2026-05-29T20:45:07.613Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "feedback"
+      ],
+      "object_id": "1",
+      "object_repr": "Иван (ivan@mail.ru)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u043e\\u0447\\u0438\\u0442\\u0430\\u043d\\u043e\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2026-05-29T20:45:19.521Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "core",
+        "booking"
+      ],
+      "object_id": "1",
+      "object_repr": "Иван — 2026-05-30 02:43",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+    }
+  }
+]
