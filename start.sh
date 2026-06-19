@@ -2,6 +2,8 @@
 set -e
 
 python manage.py collectstatic --no-input
+mkdir -p staticfiles/media
+cp -r media/. staticfiles/media/
 python manage.py migrate --no-input
 python manage.py loaddata data.json || true
 python manage.py sync_image_paths || true
